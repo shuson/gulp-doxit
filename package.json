@@ -1,0 +1,25 @@
+{
+  "name": "gulp-doxit",
+  "version": "0.0.1",
+  "description": "a gulp plugin to generate document using dox",
+  "license": "MIT",
+  "repository": "shuson/gulp-doxit",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "dox": "~0.6.1",
+    "chalk": "^1.0.0",
+    "gulp-util": "~3.0.2",
+    "through2": "~0.6.3",
+    "ejs": "~2.3.1",
+    "marked": "~0.3.3",
+    "ncp": "~2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11"
+  }
+}

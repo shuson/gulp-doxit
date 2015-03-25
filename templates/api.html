@@ -1,0 +1,14 @@
+<div class="container content">
+  <div class="row">
+    <div class="col-md-3 bs-docs-sidebar">
+    </div>
+    <div class="col-md-9">
+      <% for (var key in apis) {
+        var fileName = key;
+        var description = apis[key].description;
+      %>
+        <%-fileName%> - <%-description.full%>
+      <% } %>
+    </div>
+  </div>
+</div>
