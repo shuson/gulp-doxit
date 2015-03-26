@@ -1,6 +1,6 @@
 {
   "name": "gulp-doxit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a gulp plugin to generate document using dox",
   "keywords": [
     "documentation",
