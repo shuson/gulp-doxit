@@ -17,6 +17,18 @@ module.exports = function (opts) {
     opts.debug = typeof opts.debug === 'boolean' ? opts.debug : false;
 
     var globObj = require(path.resolve('package.json'));
+
+    //package json object checking
+    if(typeof globObj.author === "undefined"){
+        globObj.author = "Author"
+    }
+    if(typeof globObj.description === "undefined"){
+        globObj.description = "Description"
+    }
+    if(typeof globObj.version === "undefined"){
+        globObj.version = "0.0.1"
+    }
+
     var apis = {};
     globObj.apis = {};
 
@@ -51,7 +63,7 @@ module.exports = function (opts) {
             var api = fs.readFileSync(path.join(__dirname, '/templates/' + '/api.html'), 'utf8');
 
             //check existence of 'doc/' directory
-            var docPath = path.join(__dirname, '/doc/');
+            var docPath = path.join('./doc/');
             if(!fs.existsSync(docPath)){
                 fs.mkdirSync(docPath);
             }
@@ -64,9 +76,9 @@ module.exports = function (opts) {
 
             //finish flag
             console.log(chalk.green('API document is generated successfully.\nPlease open doc/api.html to view the result!'));
+        }else{
+            console.log(chalk.red('API document is not generated, please make sure the comment format follows the dox standard!'));
         }
-
-        console.log(chalk.red('API document is not generated, please make sure the comment format follows the dox standard!'));
 
         cb();
     });
