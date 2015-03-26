@@ -12,6 +12,16 @@ npm install --save-dev gulp-doxit
 
 >The gulpfile actually is an example of using this plugin.
 
+```
+var gulp = require('gulp'),
+    doxit = require('./index.js');
+
+gulp.task('default', function() {
+    return gulp.src('./example/**/*.js')
+        .pipe(doxit());
+})
+```
+
 The ``package.json`` file has to be created against the correct format.
 
 The output will be generated as ``api.html`` in the ``doc`` directory.
