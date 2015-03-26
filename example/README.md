@@ -1,0 +1,1 @@
+>The example shows the comment format from [dox](https://github.com/tj/dox) example

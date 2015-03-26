@@ -1,5 +1,5 @@
 /**
- * Escape the given `html`.
+ * Escape the given `html`, by test
  *
  * @example
  *     utils.escape('<script></script>')

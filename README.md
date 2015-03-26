@@ -1,4 +1,19 @@
 # gulp-doxit
-generate document using dox and ejs template for gulp build
+Generate document using dox and ejs template for gulp build
 
->this is a test repo not finished yet, try not to use it
+>this repo takes much from [doxmate](https://github.com/JacksonTian/doxmate) and [dox](https://github.com/tj/dox) 
+
+##Installation
+```
+npm install --save-dev gulp-doxit
+```
+
+##User guide
+
+>The gulpfile actually is an example of using this plugin.
+
+The output will be generated as ``api.html`` in the ``doc`` directory.
+
+##Licence
+
+MIT
